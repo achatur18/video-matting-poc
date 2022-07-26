@@ -5,10 +5,10 @@ model = torch.hub.load("PeterL1n/RobustVideoMatting", "mobilenetv3").cpu() # or 
 
 
 def video_matting(                   
-        input_source='input.mp4',        # A video file or an image sequence directory.
-        output_composition='com.mp4',
-        output_alpha="pha.mp4",          # [Optional] Output the raw alpha prediction.
-        output_foreground="fgr.mp4", ):
+        input_source='static/input.mp4',        # A video file or an image sequence directory.
+        output_composition='static/com.mp4',
+        output_alpha="static/pha.mp4",          # [Optional] Output the raw alpha prediction.
+        output_foreground="static/fgr.mp4", ):
     convert_video(
         model,                           # The model, can be on any device (cpu or cuda).
         input_source=input_source,        # A video file or an image sequence directory.
